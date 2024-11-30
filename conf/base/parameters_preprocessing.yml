@@ -1,0 +1,9 @@
+# This is a boilerplate parameters config generated for pipeline 'preprocessing'
+# using Kedro 0.19.9.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.19.9/configuration/parameters.html
+
+batsman_sequence_length : 5
+bowler_sequence_length : 5
+fielder_sequence_length : 5

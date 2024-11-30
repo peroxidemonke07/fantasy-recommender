@@ -1,0 +1,82 @@
+# This is a boilerplate parameters config generated for pipeline 'data_science'
+# using Kedro 0.19.9.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.19.9/configuration/parameters.html
+
+# Parameters for train_test_split_bat node
+train_test_split_params_bat:
+  test_size: 0.2
+  cali_size: 0.5
+  random_state: 42
+
+# Parameters for train_test_split_bowl node
+train_test_split_params_bowl:
+  test_size: 0.2
+  cali_size: 0.5
+  random_state: 42
+
+# Parameters for train_test_split_field node
+train_test_split_params_field:
+  test_size: 0.2
+  cali_size: 0.5
+  random_state: 42
+
+# Parameters for training bat model
+seq_context_split_params_bat:
+  seq_col_start: "bat_"  # Prefix for sequential feature columns in batting data
+
+lstm_model_params_bat:
+  sequence_length: 5  # Number of past matches considered for the sequence
+  num_features_per_match: 4  # Number of features per match
+
+train_params_bat:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+
+# Parameters for training bowl model
+seq_context_split_params_bowl:
+  seq_col_start: "bowl_"
+
+lstm_model_params_bowl:
+  sequence_length: 5
+  num_features_per_match: 8
+
+train_params_bowl:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+
+# Parameters for training field model
+seq_context_split_params_field:
+  seq_col_start: "field_"  
+
+lstm_model_params_field:
+  sequence_length: 5 
+  num_features_per_match: 3  
+
+train_params_field:
+  epochs: 50
+  batch_size: 32  
+  learning_rate: 0.001  
+
+# parameters.yml
+
+calibrate_params_bat:
+  seq_length: 5
+  n_features: 4
+  significance_level: 0.1
+  batch_size: 32
+
+calibrate_params_bowl:
+  seq_length: 5
+  n_features: 8
+  significance_level: 0.1
+  batch_size: 32
+
+calibrate_params_field:
+  seq_length: 5
+  n_features: 3
+  significance_level: 0.1
+  batch_size: 32

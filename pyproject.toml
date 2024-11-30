@@ -1,0 +1,34 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fantasy"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+fantasy = "fantasy.__main__:main"
+
+[tool.kedro]
+package_name = "fantasy"
+project_name = "fantasy"
+kedro_init_version = "0.19.8"
+tools = [ "None",]
+example_pipeline = "False"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "fantasy.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "97fc717263c8480b9a28940bee074e8c"
